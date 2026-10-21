@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/conflux/Source/Furnace",
+  "command": "/usr/bin/c++ -DGLEW_STATIC -I/home/conflux/Source/Furnace/cpp/../external/tinyxml2 -I/home/conflux/Source/Furnace/cpp/../external/tinygltf -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/opus -I/home/conflux/Source/Furnace/cpp/../include  -o CMakeFiles/TINYXML2_LIBRARIES.dir/external/tinyxml2/tinyxml2.cpp.o -c /home/conflux/Source/Furnace/external/tinyxml2/tinyxml2.cpp",
+  "file": "/home/conflux/Source/Furnace/external/tinyxml2/tinyxml2.cpp",
+  "output": "CMakeFiles/TINYXML2_LIBRARIES.dir/external/tinyxml2/tinyxml2.cpp.o"
+},
+{
+  "directory": "/home/conflux/Source/Furnace",
+  "command": "/usr/bin/c++ -DGLEW_STATIC -I/home/conflux/Source/Furnace/cpp/../external/tinyxml2 -I/home/conflux/Source/Furnace/cpp/../external/tinygltf -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/opus -I/home/conflux/Source/Furnace/cpp/../include  -o CMakeFiles/FurnaceXX.dir/Enemy.cpp.o -c /home/conflux/Source/Furnace/cpp/Enemy.cpp",
+  "file": "/home/conflux/Source/Furnace/cpp/Enemy.cpp",
+  "output": "CMakeFiles/FurnaceXX.dir/Enemy.cpp.o"
+},
+{
+  "directory": "/home/conflux/Source/Furnace",
+  "command": "/usr/bin/c++ -DGLEW_STATIC -I/home/conflux/Source/Furnace/cpp/../external/tinyxml2 -I/home/conflux/Source/Furnace/cpp/../external/tinygltf -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/opus -I/home/conflux/Source/Furnace/cpp/../include  -o CMakeFiles/FurnaceXX.dir/Game.cpp.o -c /home/conflux/Source/Furnace/cpp/Game.cpp",
+  "file": "/home/conflux/Source/Furnace/cpp/Game.cpp",
+  "output": "CMakeFiles/FurnaceXX.dir/Game.cpp.o"
+},
+{
+  "directory": "/home/conflux/Source/Furnace",
+  "command": "/usr/bin/c++ -DGLEW_STATIC -I/home/conflux/Source/Furnace/cpp/../external/tinyxml2 -I/home/conflux/Source/Furnace/cpp/../external/tinygltf -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/opus -I/home/conflux/Source/Furnace/cpp/../include  -o CMakeFiles/FurnaceXX.dir/GameStateMachine.cpp.o -c /home/conflux/Source/Furnace/cpp/GameStateMachine.cpp",
+  "file": "/home/conflux/Source/Furnace/cpp/GameStateMachine.cpp",
+  "output": "CMakeFiles/FurnaceXX.dir/GameStateMachine.cpp.o"
+},
+{
+  "directory": "/home/conflux/Source/Furnace",
+  "command": "/usr/bin/c++ -DGLEW_STATIC -I/home/conflux/Source/Furnace/cpp/../external/tinyxml2 -I/home/conflux/Source/Furnace/cpp/../external/tinygltf -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/opus -I/home/conflux/Source/Furnace/cpp/../include  -o CMakeFiles/FurnaceXX.dir/Gui.cpp.o -c /home/conflux/Source/Furnace/cpp/Gui.cpp",
+  "file": "/home/conflux/Source/Furnace/cpp/Gui.cpp",
+  "output": "CMakeFiles/FurnaceXX.dir/Gui.cpp.o"
+},
+{
+  "directory": "/home/conflux/Source/Furnace",
+  "command": "/usr/bin/c++ -DGLEW_STATIC -I/home/conflux/Source/Furnace/cpp/../external/tinyxml2 -I/home/conflux/Source/Furnace/cpp/../external/tinygltf -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/opus -I/home/conflux/Source/Furnace/cpp/../include  -o CMakeFiles/FurnaceXX.dir/InputHandler.cpp.o -c /home/conflux/Source/Furnace/cpp/InputHandler.cpp",
+  "file": "/home/conflux/Source/Furnace/cpp/InputHandler.cpp",
+  "output": "CMakeFiles/FurnaceXX.dir/InputHandler.cpp.o"
+},
+{
+  "directory": "/home/conflux/Source/Furnace",
+  "command": "/usr/bin/c++ -DGLEW_STATIC -I/home/conflux/Source/Furnace/cpp/../external/tinyxml2 -I/home/conflux/Source/Furnace/cpp/../external/tinygltf -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/opus -I/home/conflux/Source/Furnace/cpp/../include  -o CMakeFiles/FurnaceXX.dir/Level.cpp.o -c /home/conflux/Source/Furnace/cpp/Level.cpp",
+  "file": "/home/conflux/Source/Furnace/cpp/Level.cpp",
+  "output": "CMakeFiles/FurnaceXX.dir/Level.cpp.o"
+},
+{
+  "directory": "/home/conflux/Source/Furnace",
+  "command": "/usr/bin/c++ -DGLEW_STATIC -I/home/conflux/Source/Furnace/cpp/../external/tinyxml2 -I/home/conflux/Source/Furnace/cpp/../external/tinygltf -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/opus -I/home/conflux/Source/Furnace/cpp/../include  -o CMakeFiles/FurnaceXX.dir/NodeGraph.cpp.o -c /home/conflux/Source/Furnace/cpp/NodeGraph.cpp",
+  "file": "/home/conflux/Source/Furnace/cpp/NodeGraph.cpp",
+  "output": "CMakeFiles/FurnaceXX.dir/NodeGraph.cpp.o"
+},
+{
+  "directory": "/home/conflux/Source/Furnace",
+  "command": "/usr/bin/c++ -DGLEW_STATIC -I/home/conflux/Source/Furnace/cpp/../external/tinyxml2 -I/home/conflux/Source/Furnace/cpp/../external/tinygltf -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/opus -I/home/conflux/Source/Furnace/cpp/../include  -o CMakeFiles/FurnaceXX.dir/Player.cpp.o -c /home/conflux/Source/Furnace/cpp/Player.cpp",
+  "file": "/home/conflux/Source/Furnace/cpp/Player.cpp",
+  "output": "CMakeFiles/FurnaceXX.dir/Player.cpp.o"
+},
+{
+  "directory": "/home/conflux/Source/Furnace",
+  "command": "/usr/bin/c++ -DGLEW_STATIC -I/home/conflux/Source/Furnace/cpp/../external/tinyxml2 -I/home/conflux/Source/Furnace/cpp/../external/tinygltf -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/opus -I/home/conflux/Source/Furnace/cpp/../include  -o CMakeFiles/FurnaceXX.dir/ResourceManager.cpp.o -c /home/conflux/Source/Furnace/cpp/ResourceManager.cpp",
+  "file": "/home/conflux/Source/Furnace/cpp/ResourceManager.cpp",
+  "output": "CMakeFiles/FurnaceXX.dir/ResourceManager.cpp.o"
+}
+]

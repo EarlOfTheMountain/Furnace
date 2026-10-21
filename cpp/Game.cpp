@@ -52,7 +52,7 @@ bool Game::init()
             else
             {
                 GLenum err;
-                glewExperimental = GL_TRUE;
+                //glewExperimental = GL_TRUE;
                 err = glewInit();
                 if (GLEW_OK != err)
                 {
