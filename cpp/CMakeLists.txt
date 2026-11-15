@@ -1,4 +1,4 @@
-﻿cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.8)
 
 project(FurnaceXX VERSION 1.0)
 
@@ -12,8 +12,6 @@ set(TINYGLTF_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}/../external/tinygltf")
 set(COMPILE_DEFINITIONS "${COMPILE_DEFINITIONS};GLEW_STATIC")
 add_compile_definitions(${COMPILE_DEFINITIONS})
 
-#if (${CMAKE_SYSTEM_NAME} STREQUAL "Windows" AND NOT MINGW)
-
 if (MSVC)
     message(STATUS "${CMAKE_SYSTEM}")
 
@@ -25,7 +23,7 @@ if (MSVC)
     set(GLM_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}/../external/glm")
     set(GLEW_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}/../external/glew-2.1.0/include")
 
-    # Support both 32 and 64 bit builds
+    # Support both 32 and 64 bit builds.
     if (${CMAKE_SIZEOF_VOID_P} MATCHES 8)
         set(SDL2_LIBRARIES
             "${PROJECT_SOURCE_DIR}/../external/SDL2-2.0.12/lib/x64/SDL2.lib;${PROJECT_SOURCE_DIR}/../external/SDL2-2.0.12/lib/x64/SDL2main.lib")
@@ -43,30 +41,16 @@ if (MSVC)
         set(GLEW_LIBRARIES "${PROJECT_SOURCE_DIR}/../external/glew-2.1.0/lib/Release/Win32/glew32s.lib")
     endif ()
 
-elseif (CMAKE_SYSTEM_NAME MATCHES "^(FreeBSD|OpenBSD|NetBSD)$")
-    message(STATUS "Configuring Furnace for ${CMAKE_SYSTEM_NAME}")
-    set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-    # BSD packages are installed outside the system prefixes on some platforms
-    # (for example, FreeBSD packages commonly use /usr/local). Use pkg-config's
-    # imported targets so its library search paths and transitive dependencies
-    # are preserved without hardcoding platform-specific directories.
-    find_package(PkgConfig REQUIRED)
-    pkg_check_modules(SDL2 REQUIRED IMPORTED_TARGET sdl2)
-    pkg_check_modules(SDL2_IMAGE REQUIRED IMPORTED_TARGET SDL2_image>=2.0.0.0)
-    pkg_check_modules(SDL2_MIXER REQUIRED IMPORTED_TARGET SDL2_mixer)
-    pkg_check_modules(GLEW REQUIRED IMPORTED_TARGET glew)
-    set(FURNACE_USE_PKG_CONFIG_TARGETS TRUE)
-
 elseif (UNIX AND NOT MINGW)
-    message(STATUS "Configuring Furnace for ${CMAKE_SYSTEM_NAME}")
+    if (CMAKE_SYSTEM_NAME MATCHES "^(FreeBSD|OpenBSD|NetBSD)$")
+        message(STATUS "Configuring Furnace for ${CMAKE_SYSTEM_NAME}")
+    else ()
+        message(STATUS "Configuring Furnace for ${CMAKE_SYSTEM_NAME}")
+    endif ()
     set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-    find_package(PkgConfig REQUIRED)
-    pkg_check_modules(SDL2 REQUIRED IMPORTED_TARGET sdl2)
-    pkg_check_modules(SDL2_IMAGE REQUIRED IMPORTED_TARGET SDL2_image>=2.0.0.0)
-    pkg_check_modules(SDL2_MIXER REQUIRED IMPORTED_TARGET SDL2_mixer)
-    pkg_check_modules(GLEW REQUIRED IMPORTED_TARGET glew)
+    # Shared SDL2/GLEW discovery for Unix and BSD systems.
+    include("${CMAKE_CURRENT_LIST_DIR}/cmake/UnixDependencies.cmake")
     set(FURNACE_USE_PKG_CONFIG_TARGETS TRUE)
 
 elseif (MINGW)

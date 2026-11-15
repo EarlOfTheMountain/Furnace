@@ -37,9 +37,39 @@ sudo dnf install @development-tools cmake pkgconf-pkg-config mesa-libGL-devel \
   SDL2-devel SDL2_image-devel SDL2_mixer-devel glew-devel glm-devel
 ```
 
-### Configure, build, and run
+## BSD build
 
-From the repository root:
+The BSD builds use `pkg-config` to locate SDL2, SDL2_image, SDL2_mixer, and GLEW. Install the packages and make sure a C++ toolchain and OpenGL development libraries are available for your system. Package names can vary by release; use the distribution's package search if a name is not recognized.
+
+### FreeBSD
+
+FreeBSD's base system provides Clang and make. Install the libraries and build tools with `pkg`:
+
+```sh
+sudo pkg install cmake pkgconf sdl2 sdl2_image sdl2_mixer glew glm mesa-libs
+```
+
+### OpenBSD
+
+OpenBSD includes a C/C++ toolchain and make in the base system. Install CMake and the dependencies with `pkg_add`:
+
+```sh
+doas pkg_add cmake pkgconf sdl2 sdl2_image sdl2_mixer glew glm
+```
+
+### NetBSD
+
+Use an installed C/C++ toolchain and `pkgin` (or install the equivalent packages from pkgsrc):
+
+```sh
+sudo pkgin install cmake pkgconf SDL2 SDL2_image SDL2_mixer glew glm
+```
+
+If `pkg-config` cannot find the installed `.pc` files, check the package manager's pkg-config search path. On FreeBSD, this is commonly `/usr/local/libdata/pkgconfig`; pkgsrc installations commonly use `/usr/pkg/lib/pkgconfig`.
+
+## Configure, build, and run
+
+From the repository root on Linux or BSD:
 
 ```sh
 cmake cpp -B build
