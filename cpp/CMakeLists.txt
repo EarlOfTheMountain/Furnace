@@ -43,17 +43,31 @@ if (MSVC)
         set(GLEW_LIBRARIES "${PROJECT_SOURCE_DIR}/../external/glew-2.1.0/lib/Release/Win32/glew32s.lib")
     endif ()
 
-elseif (UNIX AND NOT MINGW)
-    message(STATUS "${CMAKE_SYSTEM}")
+elseif (CMAKE_SYSTEM_NAME MATCHES "^(FreeBSD|OpenBSD|NetBSD)$")
+    message(STATUS "Configuring Furnace for ${CMAKE_SYSTEM_NAME}")
     set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-    # Imported pkg-config targets carry each package's include paths and
-    # library search directories (e.g. /usr/local/lib on FreeBSD).
+    # BSD packages are installed outside the system prefixes on some platforms
+    # (for example, FreeBSD packages commonly use /usr/local). Use pkg-config's
+    # imported targets so its library search paths and transitive dependencies
+    # are preserved without hardcoding platform-specific directories.
     find_package(PkgConfig REQUIRED)
     pkg_check_modules(SDL2 REQUIRED IMPORTED_TARGET sdl2)
     pkg_check_modules(SDL2_IMAGE REQUIRED IMPORTED_TARGET SDL2_image>=2.0.0.0)
     pkg_check_modules(SDL2_MIXER REQUIRED IMPORTED_TARGET SDL2_mixer)
     pkg_check_modules(GLEW REQUIRED IMPORTED_TARGET glew)
+    set(FURNACE_USE_PKG_CONFIG_TARGETS TRUE)
+
+elseif (UNIX AND NOT MINGW)
+    message(STATUS "Configuring Furnace for ${CMAKE_SYSTEM_NAME}")
+    set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(SDL2 REQUIRED IMPORTED_TARGET sdl2)
+    pkg_check_modules(SDL2_IMAGE REQUIRED IMPORTED_TARGET SDL2_image>=2.0.0.0)
+    pkg_check_modules(SDL2_MIXER REQUIRED IMPORTED_TARGET SDL2_mixer)
+    pkg_check_modules(GLEW REQUIRED IMPORTED_TARGET glew)
+    set(FURNACE_USE_PKG_CONFIG_TARGETS TRUE)
 
 elseif (MINGW)
     message(STATUS "Starting MinGW setup")
@@ -89,7 +103,7 @@ if (MINGW)
         -lm -ldinput8 -ldxguid -ldxerr8 -luser32 -lgdi32 -lwinmm -limm32
         -lole32 -loleaut32 -lshell32 -lsetupapi -lversion -luuid
         -static-libgcc -static-libstdc++")
-elseif (UNIX AND NOT MINGW)
+elseif (FURNACE_USE_PKG_CONFIG_TARGETS)
     target_link_libraries(FurnaceXX
         PkgConfig::GLEW
         OpenGL::GL
