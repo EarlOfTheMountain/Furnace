@@ -1,126 +1,126 @@
-{"GameStates": {
+{
+  "GameStates": {
     "MenuState": {
-		"Textures" : {
-			"MenuButtons" : "resources/images/Buttons.gif",
-			"BlueMoon" : "resources/images/BlueMoon.gif"
-		},
-		"Objects" : {
-			"background" : {
-				"type" : "Node2D",
-                "x" : -200,
-				"y" : -240,
-				"width" : 768,
-				"height" : 480,
-                "row" : 1,
-				"textureID" : "BlueMoon"
-			},
-			"localButton" : {
-				"type" : "Button",
-                "x" : 10,
-				"y" : 10,
-				"width" : 125,
-				"height" : 40,
-                "row" : 1,
-				"textureID" : "MenuButtons",
-                "callbackID" : 1
-            },
-            "onlineButton" : {
-				"type" : "Button",
-                "x" : 10,
-				"y" : 50,
-				"width" : 125,
-				"height" : 40,
-                "row" : 2,
-				"textureID" : "MenuButtons",
-                "callbackID" : 2
-            },
-            "optionButton" : {
-				"type" : "Button",
-                "x" : 10,
-				"y" : 90,
-				"width" : 125,
-				"height" : 40,
-                "row" : 3,
-				"textureID" : "MenuButtons",
-                "callbackID" : 3
-            },
-            "exitButton" : {
-				"type" : "Button",
-                "x" : 10,
-				"y" : 130,
-				"width" : 125,
-				"height" : 40,
-                "row" : 4,
-				"textureID" : "MenuButtons",
-                "callbackID" : 4
-            }
-		}
+      "Textures": {
+        "MenuButtons": "resources/images/Buttons.gif",
+        "BlueMoon": "resources/images/BlueMoon.gif"
+      },
+      "Objects": {
+        "background": {
+          "type": "Node2D",
+          "x": -200,
+          "y": -240,
+          "width": 768,
+          "height": 480,
+          "row": 1,
+          "textureID": "BlueMoon"
+        },
+        "localButton": {
+          "type": "Button",
+          "x": 10,
+          "y": 10,
+          "width": 125,
+          "height": 40,
+          "row": 1,
+          "textureID": "MenuButtons",
+          "callbackID": 1
+        },
+        "onlineButton": {
+          "type": "Button",
+          "x": 10,
+          "y": 50,
+          "width": 125,
+          "height": 40,
+          "row": 2,
+          "textureID": "MenuButtons",
+          "callbackID": 2
+        },
+        "optionButton": {
+          "type": "Button",
+          "x": 10,
+          "y": 90,
+          "width": 125,
+          "height": 40,
+          "row": 3,
+          "textureID": "MenuButtons",
+          "callbackID": 3
+        },
+        "exitButton": {
+          "type": "Button",
+          "x": 10,
+          "y": 130,
+          "width": 125,
+          "height": 40,
+          "row": 4,
+          "textureID": "MenuButtons",
+          "callbackID": 4
+        }
+      }
     },
-    "LocalState" : {
-        "Textures" : {
-			"Zelda" : "resources/images/ZeldaWS.gif",
-			"WillysLab" : "resources/images/DrWillysLab.gif"
-		},
-		"Objects" : {
-			"background" : {
-				"type" : "Node2D",
-                "x" : -200,
-				"y" : -240,
-				"width" : 768,
-				"height" : 480,
-                "row" : 1,
-				"textureID" : "WillysLab"
-			},
-			"player" : {
-				"type" : "Player",
-                "x" : 100,
-				"y" : 100,
-				"width" : 75,
-				"height" : 75,
-                "row" : 1,
-				"textureID" : "Zelda"
-            }
-		}
+    "LocalState": {
+      "Textures": {
+        "Zelda": "resources/images/ZeldaWS.gif",
+        "WillysLab": "resources/images/DrWillysLab.gif"
+      },
+      "Objects": {
+        "background": {
+          "type": "Node2D",
+          "x": -200,
+          "y": -240,
+          "width": 768,
+          "height": 480,
+          "row": 1,
+          "textureID": "WillysLab"
+        },
+        "player": {
+          "type": "Player",
+          "x": 100,
+          "y": 100,
+          "width": 75,
+          "height": 75,
+          "row": 1,
+          "textureID": "Zelda"
+        }
+      }
     },
-
-    "OnlineState" : "TBD",
-    "OptionsState" : "TBD",
-
-    "PauseState" : {
-        "Textures" : {
-			"MenuButtons" : "resources/images/Buttons.gif",
-			"Daily" : "resources/images/Daily.gif"
-		},
-		"Objects" : {
-			"background" : {
-				"type" : "Node2D",
-                "x" : -200,
-				"y" : -240,
-				"width" : 768,
-				"height" : 480,
-                "row" : 1,
-				"textureID" : "Daily"
-			},
-			"resumeButton" : {
-				"type" : "Button",
-                "x" : 10,
-				"y" : 10,
-				"width" : 125,
-				"height" : 40,
-                "row" : 1,
-				"textureID" : "MenuButtons",
-                "callbackID" : 1
-            },
-            "menuButton" : {
-				"type" : "Button",
-                "x" : 10,
-				"y" : 50,
-				"width" : 125,
-				"height" : 40,
-                "row" : 2,
-				"textureID" : "MenuButtons",
-                "callbackID" : 2
-            }
-		}
-    }    
-}} 
+    "OnlineState": "TBD",
+    "OptionsState": "TBD",
+    "PauseState": {
+      "Textures": {
+        "MenuButtons": "resources/images/Buttons.gif",
+        "Daily": "resources/images/Daily.gif"
+      },
+      "Objects": {
+        "background": {
+          "type": "Node2D",
+          "x": -200,
+          "y": -240,
+          "width": 768,
+          "height": 480,
+          "row": 1,
+          "textureID": "Daily"
+        },
+        "resumeButton": {
+          "type": "Button",
+          "x": 10,
+          "y": 10,
+          "width": 125,
+          "height": 40,
+          "row": 1,
+          "textureID": "MenuButtons",
+          "callbackID": 1
+        },
+        "menuButton": {
+          "type": "Button",
+          "x": 10,
+          "y": 50,
+          "width": 125,
+          "height": 40,
+          "row": 2,
+          "textureID": "MenuButtons",
+          "callbackID": 2
+        }
+      }
+    }
+  }
+}
