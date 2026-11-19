@@ -6,6 +6,9 @@ file(GLOB SOURCES
     ${PROJECT_SOURCE_DIR}/*.cpp
     ${PROJECT_SOURCE_DIR}/../include/*.hpp
 )
+if (POLICY CMP0072)
+    cmake_policy(SET CMP0072 NEW)
+endif ()
 find_package(OpenGL REQUIRED)
 set(TINYXML2_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}/../external/tinyxml2")
 set(TINYGLTF_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}/../external/tinygltf")
